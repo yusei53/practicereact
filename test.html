@@ -1,0 +1,15 @@
+<p id="target">クリックしてください。</p>
+<p id="result"></p>
+
+<script>
+// テキストを表示する要素を取得
+var resultElement = document.getElementById("result");
+
+// クリックイベントの処理を登録
+document.getElementById("target").addEventListener("click", function(event) {
+  // クリックされた要素のテキストを取得して、結果を表示
+  var targetElement = event.target;
+  var text = targetElement.textContent;
+  resultElement.textContent = "クリックされたのは「" + text + "」です。";
+});
+</script>
